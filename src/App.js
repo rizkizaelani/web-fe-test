@@ -34,9 +34,7 @@ class App extends React.Component {
             jml = temp / data[i];
             temp = temp % data[i];
 
-            // item = value + " = " + Math.floor(jml) + "X " + " Rp" + data[i];
             items.push({ i: i, nominal: data[i], jml: Math.floor(jml), temp: temp < 50 ? temp : "" });
-            // items.push(item);
 
         }
 
@@ -45,7 +43,7 @@ class App extends React.Component {
         console.log(items);
 
         items = items.map(i => {
-            var values = [value + " = " + i.jml + "x Rp" + i.nominal + i.temp !== null ? "left Rp" + i.temp + " (no available fraction)" : ""];
+            var values = [value + " = " + i.jml + "x Rp" + i.nominal];
             return values;
         })
 
